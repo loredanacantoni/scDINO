@@ -7,8 +7,7 @@
 #SBATCH --gpus=1                    # Request 1 GPU 
 
 
-module load miniforge3             
-conda activate /home/lcanto/.venvs/scdino_venv
+source /home/lcanto/.venvs/scdino_venv/bin/activate
 cd /scratch/lcanto/scDINO
 
 # Set local single-node rendezvous variables (prevents port errors)
