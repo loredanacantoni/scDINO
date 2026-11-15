@@ -13,6 +13,8 @@ source /scratch/$USER/scdino_venv/bin/activate
 
 cd /scratch/$USER/scDINO
 
+export CATALYST_CV_REQUIRED=0
+
 # Run the python script
 python pyscripts/main_dino.py
 
