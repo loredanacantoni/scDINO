@@ -14,5 +14,5 @@ source /scratch/$USER/scdino_venv/bin/activate
 cd /scratch/$USER/scDINO
 
 # Run the python script
-python main_dino.py
+python pyscripts/main_dino.py
 
