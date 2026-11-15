@@ -24,6 +24,16 @@ import numpy
 from PIL import Image
 import torchvision
 import ast
+
+# --- Python 3.12 Compatibility Patch for Catalyst ---
+import collections
+import collections.abc
+collections.MutableMapping = collections.abc.MutableMapping
+collections.Iterable = collections.abc.Iterable
+collections.Mapping = collections.abc.Mapping
+collections.Sequence = collections.abc.Sequence
+# ----------------------------------------------------
+
 from catalyst.data import DistributedSamplerWrapper
 
 torchvision_archs = sorted(name for name in torchvision_models.__dict__
