@@ -48,6 +48,8 @@ echo "Output Directory: $OUT_DIR"
     --batch_size_per_gpu 128 \
     --num_workers 4 \
     --use_cuda True \
-    --normalize ""
+    --selected_channels "" \
+    --channel_dict "{0: 'DAPI', 1: 'Phalloidin', 2: 'WGA', 3: 'Mito', 4: 'ConA'}" \
+    --norm_per_channel "[(0.1288, 0.1245, 0.1223, 0.1235, 0.1201), (0.1582, 0.1534, 0.1512, 0.1524, 0.1498)]"
 
 echo "Extraction finished at $(date)"
