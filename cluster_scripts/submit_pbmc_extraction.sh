@@ -41,7 +41,7 @@ echo "Output Directory: $OUT_DIR"
 
 /home/lcanto/.venvs/scdino_venv/bin/python /scratch/lcanto/scDINO/pyscripts/compute_CLS_features.py \
     --pretrained_weights "$CKPT" \
-    --data_path "$DATA_DIR" \
+    --dataset_dir "$DATA_DIR" \
     --output_dir "$OUT_DIR" \
     --arch vit_tiny \
     --batch_size_per_gpu 128 \
