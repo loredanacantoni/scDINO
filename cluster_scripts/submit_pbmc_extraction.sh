@@ -46,7 +46,7 @@ echo "Output Directory: $OUT_DIR"
     --arch vit_tiny \
     --batch_size_per_gpu 128 \
     --num_workers 4 \
-    --use_cuda True
+    --use_cuda True \
     --normalize ""
 
 echo "Extraction finished at $(date)"
