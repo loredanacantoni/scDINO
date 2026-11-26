@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
 #SBATCH --mem=32G
-#SBATCH --partition=gpus
+
 
 cd /scratch/lcanto/scDINO
 export PATH="/home/lcanto/.venvs/scdino_venv/bin:$PATH"
