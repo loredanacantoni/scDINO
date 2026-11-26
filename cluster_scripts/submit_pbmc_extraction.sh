@@ -23,7 +23,7 @@ export RANK=0
 export LOCAL_RANK=0
 export MASTER_ADDR=localhost
 export MASTER_PORT=29500
-export TORCH_FORCE_WEIGHTS_ONLY_LOAD=1
+
 
 
 CKPT="/shares/prbour.biovision.uzh/2_research/out/lcanto/scDINO_data/pbmc_test_run/recent_run/scDINO_ViTs/full_vit_name/checkpoint.pth"
