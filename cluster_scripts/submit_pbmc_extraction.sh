@@ -44,10 +44,13 @@ echo "Output Directory: $OUT_DIR"
     --pretrained_weights "$CKPT" \
     --dataset_dir "$DATA_DIR" \
     --output_dir "$OUT_DIR" \
+    --name_of_run "recent_run" \
     --arch vit_tiny \
     --batch_size_per_gpu 128 \
     --num_workers 4 \
     --use_cuda True \
-    --parse_params "$PARAMS"
+    --selected_channels 012 \
+    --channel_dict "{0: 'ch0', 1: 'ch1', 2: 'ch2'}" \
+    --norm_per_channel "[(0.1288, 0.1245, 0.1223), (0.1582, 0.1534, 0.1512)]"
 
 echo "Extraction finished at $(date)"
