@@ -40,7 +40,6 @@ echo "Dataset Source:   $DATA_DIR"
 echo "Output Directory: $OUT_DIR"
 
 
-
 /home/lcanto/.venvs/scdino_venv/bin/python /scratch/lcanto/scDINO/pyscripts/compute_CLS_features.py \
     --pretrained_weights "$CKPT" \
     --dataset_dir "$DATA_DIR" \
@@ -50,9 +49,9 @@ echo "Output Directory: $OUT_DIR"
     --num_workers 4 \
     --use_cuda True \
     --parse_params "{\
-'selected_channels': [0, 1, 2],\
+'output_dir': '$OUT_DIR',\
+'name_of_run': 'recent_run',\'selected_channels':,\
 'channel_dict': {0: 'ch0', 1: 'ch1', 2: 'ch2'},\
 'norm_per_channel_file': '$NORM_FILE'\
 }"
-
 echo "Extraction finished at $(date)"
