@@ -48,10 +48,6 @@ echo "Output Directory: $OUT_DIR"
     --batch_size_per_gpu 128 \
     --num_workers 4 \
     --use_cuda True \
-    --parse_params "{\
-'output_dir': '$OUT_DIR',\
-'name_of_run': 'recent_run',\'selected_channels':,\
-'channel_dict': {0: 'ch0', 1: 'ch1', 2: 'ch2'},\
-'norm_per_channel_file': '$NORM_FILE'\
-}"
+    --parse_params "$PARAMS"
+
 echo "Extraction finished at $(date)"
