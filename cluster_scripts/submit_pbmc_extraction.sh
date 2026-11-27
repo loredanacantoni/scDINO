@@ -50,7 +50,7 @@ echo "Output Directory: $OUT_DIR"
     --num_workers 4 \
     --use_cuda True \
     --parse_params "{\
-'selected_channels':,\
+'selected_channels': [0, 1, 2],\
 'channel_dict': {0: 'ch0', 1: 'ch1', 2: 'ch2'},\
 'norm_per_channel_file': '$NORM_FILE'\
 }"
