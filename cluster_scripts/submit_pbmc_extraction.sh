@@ -29,6 +29,7 @@ export MASTER_PORT=29500
 CKPT="/shares/prbour.biovision.uzh/2_research/out/lcanto/scDINO_data/pbmc_test_run/recent_run/scDINO_ViTs/full_vit_name/checkpoint.pth"
 DATA_DIR="/shares/prbour.biovision.uzh/2_research/out/lcanto/scDINO_data/pbmc_raw/DeepPhenotype_PBMC_ImageSet_YSeverin/Training"
 OUT_DIR="/shares/prbour.biovision.uzh/2_research/out/lcanto/scDINO_data/pbmc_test_run/extracted_features"
+NORM_FILE="/scratch/lcanto/scDINO/configs/norm_pbmc.json"
 
 mkdir -p "$OUT_DIR"
 mkdir -p logs
@@ -48,8 +49,10 @@ echo "Output Directory: $OUT_DIR"
     --batch_size_per_gpu 128 \
     --num_workers 4 \
     --use_cuda True \
-    --selected_channels "[0, 1, 2]" \
-    --channel_dict "{0: 'ch0', 1: 'ch1', 2: 'ch2'}" \
-    --norm_per_channel "[(0.1288, 0.1245, 0.1223, 0.1235, 0.1201), (0.1582, 0.1534, 0.1512, 0.1524, 0.1498)]"
+    --parse_params "{\
+'selected_channels':,\
+'channel_dict': {0: 'ch0', 1: 'ch1', 2: 'ch2'},\
+'norm_per_channel_file': '$NORM_FILE'\
+}"
 
 echo "Extraction finished at $(date)"
